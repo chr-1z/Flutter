@@ -4,7 +4,7 @@
 
 ​      
 ​      
-## Seção 2 - Aulas 1,2 e 3  
+## Seção 2 - Aulas 1, 2 e 3  
 
 
 
