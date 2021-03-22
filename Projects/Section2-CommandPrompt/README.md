@@ -5,6 +5,9 @@
 ​      
 ​      
 ## Seção 2 - Aulas 1,2 e 3  
+
+
+
 ## Comandos Terminal 
 
 ```sh
