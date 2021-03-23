@@ -18,24 +18,29 @@ calculoImc() {
   String textAltura = stdin.readLineSync()!;
   double altura = double.parse(textAltura);
 
-  double calcImc = peso / (altura * altura);
-  print(calcImc);
-
-  imprimirResultado(calcImc);
+  double imc = calcImc(peso, altura);
+  print("=============");
+  print(imprimirResultado(imc));
 }
 
-imprimirResultado(double calcImc) {
-  if (calcImc < 18.5) {
-    print("Abaixo do peso!");
-  } else if (calcImc >= 18.5 && calcImc <= 24.99) {
-    print("Peso normal");
-  } else if (calcImc >= 25 && calcImc <= 29.99) {
-    print("Sobrepeso");
-  } else if (calcImc >= 30 && calcImc <= 34.99) {
-    print("Obesidade grau 1");
-  } else if (calcImc >= 35 && calcImc <= 39.99) {
-    print("Obesidade grau 2");
+double calcImc(int peso, double altura) {
+  return peso / (altura * altura);
+}
+
+imprimirResultado(double imc) {
+  String resultado;
+  if (imc < 18.5) {
+    resultado = "Abaixo do peso!";
+  } else if (imc >= 18.5 && imc <= 24.99) {
+    resultado = "Peso normal";
+  } else if (imc >= 25 && imc <= 29.99) {
+    resultado = "Sobrepeso";
+  } else if (imc >= 30 && imc <= 34.99) {
+    resultado = "Obesidade grau 1";
+  } else if (imc >= 35 && imc <= 39.99) {
+    resultado = "Obesidade grau 2";
   } else {
-    print("Obesidade grau 3");
+    resultado = "Obesidade grau 3";
   }
+  return resultado;
 }
