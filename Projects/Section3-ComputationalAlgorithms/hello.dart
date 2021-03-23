@@ -1,10 +1,7 @@
 main() {
-  const hello = "Hello World";
+  var text1 = "Christian ";
+  var text2 = "Oliveira";
 
-  print(hello);
-
-  var num1 = 10;
-  var num2 = 50;
-
-  print(num1 * num2);
+  var total = text1 + text2;
+  print(total);
 }
