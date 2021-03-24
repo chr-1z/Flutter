@@ -1,6 +1,6 @@
 import 'dart:io';
 
-Map<String, dynamic> cadastro = {};
+List<Map<String, dynamic>> cadastros = [];
 
 main() {
   // Map<String, dynamic> maps = {
@@ -26,7 +26,7 @@ main() {
       print("\x1B[2J\x1B[0;0H");
       cadastrar();
     } else if (comando == "imprimir") {
-      print(cadastro);
+      print(cadastros);
     } else {
       print(" === ESSE COMANDO NÃO EXISTE === ");
     }
@@ -34,6 +34,8 @@ main() {
 }
 
 cadastrar() {
+  Map<String, dynamic> cadastro = {};
+
   print(" === Digite o seu nome === ");
   cadastro["nome"] = stdin.readLineSync();
 
@@ -45,4 +47,8 @@ cadastrar() {
 
   print(" === Digite o seu estado ===");
   cadastro["estado"] = stdin.readLineSync();
+
+  cadastros.add(cadastro);
+
+
 }
