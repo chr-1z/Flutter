@@ -1,5 +1,5 @@
 main() {
-  var maps = {
+  Map<String, dynamic> maps = {
     "nome": "Christian José",
     "idade": 21,
     "cidade": "Palmas",
@@ -9,5 +9,5 @@ main() {
   //maps["nome"] = "João Alves";
   print(maps["nome"]);
 
-  
+
 }
