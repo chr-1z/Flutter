@@ -1,13 +1,13 @@
 import 'dart:io';
 
-main() {
+carrinhoCompras() {
   List<String> produtos =
       []; // para tornar uma variável global, basta iniciá-la fora do main(){}
   bool condicao = true;
 
   while (condicao) {
     print("===== ADICIONE UM PRODUTO =====");
-    String text = stdin.readLineSync()!;
+    String text = stdin.readLineSync();
     if (text == "sair") {
       print("===== TERMINOU O PROGRAMA =====");
       condicao = false;
@@ -30,7 +30,7 @@ imprimir(produtos) {
 remover(produtos) {
   print("===== QUAL ITEM DESEJA REMOVER? =====");
   imprimir(produtos);
-  int item = int.parse(stdin.readLineSync()!);
+  int item = int.parse(stdin.readLineSync());
   produtos.removeAt(item);
   print("===== ITEM REMOVIDO =====");
 }

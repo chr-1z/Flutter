@@ -2,7 +2,7 @@ import 'dart:io';
 
 List<Map<String, dynamic>> cadastros = [];
 
-main() {
+cadastrarPessoa() {
   // Map<String, dynamic> maps = {
   //   "nome": "Christian José",
   //   "idade": 21,
@@ -18,7 +18,7 @@ main() {
 
   while (condicao) {
     print("=== DIGITE UM COMANDO ===");
-    String comando = stdin.readLineSync()!;
+    String comando = stdin.readLineSync();
     if (comando == "sair") {
       print("=== PROGRAMA FINALIZADO ===");
       condicao = false;
@@ -49,6 +49,4 @@ cadastrar() {
   cadastro["estado"] = stdin.readLineSync();
 
   cadastros.add(cadastro);
-
-
 }

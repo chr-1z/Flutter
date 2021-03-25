@@ -1,25 +1,13 @@
 import 'dart:io';
 
-main() {
-
-  // Comentários do procedimento que deve ser feito
-
-  // pegar o peso
-  // pegar a altura
-  // realizar calculo
-  // retornar o imc
-
-  calculoImc();
-}
-
 // programa que calcula o imc
 calculoImc() {
   print("=== Digite seu peso ===");
-  String textPeso = stdin.readLineSync()!;
+  String textPeso = stdin.readLineSync();
   int peso = int.parse(textPeso);
 
   print("=== Digite sua altura (em M, usar ponto) ===");
-  String textAltura = stdin.readLineSync()!;
+  String textAltura = stdin.readLineSync();
   double altura = double.parse(textAltura);
 
   double imc = calcImc(peso, altura);
