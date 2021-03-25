@@ -5,17 +5,8 @@ class Pessoa {
   double peso;
 
   //calcula imc
-  double imc() {
-    double imc = peso / (altura * altura);
-    return imc;
-  }
+  double imc() => peso / (altura * altura);
 
   //se é maior de idade
-  bool maiorDeIdade() {
-    if (idade >= 18) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  bool maiorDeIdade() => idade >= 18;
 }
